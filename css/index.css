@@ -1,0 +1,271 @@
+:root {
+  --primary-color:#ff3527;
+  --secondary-color: #ff3275;
+  --tertiary-color: #ff469f;
+  --black : #123;
+  --grey: #707070;
+  --light-grey: #b7b7b7;
+}
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  font-family: verdana;
+  box-sizing: border-box;
+  color: var(--black); 
+  transition: all 250ms ease;
+}
+
+html {
+  font-size: 10px;
+}
+
+.wrapper{
+  background-color: whitesmoke;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  width: 88%;
+  margin: 1rem auto;
+}
+
+.btn {
+  border: 2px solid transparent;
+  outline: 1px solid transparent;
+  color: white;
+  background-image: linear-gradient(to right, var(--secondary-color), var(--primary-color));
+  cursor: pointer;
+}
+
+
+/* ====================   CODE STARTS HERE    =================== */
+header .container {
+  display: flex;
+  align-items: center;
+}
+
+header .logo {
+  height: 5rem;
+}
+
+header .menu-icon {
+  width: 2.5rem;
+  cursor: pointer;
+}
+
+header nav{
+  flex: 1;
+}
+
+header ul {
+  list-style-type: none;
+  text-align : right;
+  padding-right: 4rem;
+}
+header li {
+  display : inline-block;
+}
+
+header ul a{
+  font-size: 1.65rem;
+  margin : .7rem;
+}
+
+header ul a:hover {
+  color: var(--grey);
+}
+.header ul a:not(.last) {
+  color: orange;
+  font-weight: bold;
+  font-size: 3rem;
+}
+
+.row {
+  margin-top: 4rem ;
+}
+
+.row .container {
+  display :flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.row .col-1 {
+  flex-basis: 40%;
+  padding: 0 2rem;
+  position: relative;
+}
+
+.row .col-1 h2{
+  font-size: 4rem;
+}
+
+.row .col-1 h3 {
+  font-size: 3rem;
+  color: var(--grey);
+  margin: 1rem 0;
+}
+
+.row .col-1 p {
+  color: var(--light-grey);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.row .col-1 h4 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.row .row-btn {
+  width: 15rem;
+  padding: 1.5rem 0.5rem;
+  margin: 1rem 0;
+  border-radius: 2.4rem;
+}
+
+.row .row-btn img {
+  width: 3rem;
+}
+
+.row .col-1::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: .5rem;
+  height: 57%;
+  background-image: linear-gradient(var(--tertiary-color), var(--secondary-color));
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  margin-right: 1rem;
+}
+
+.row .col-2 {
+  position : relative;
+  flex-basis: 60%;
+  display: flex;
+  align-items: center;
+}
+
+.row .col-2 .controller {
+  width: 90%;
+  z-index: 2;
+}
+
+.row .color-box {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-image:linear-gradient(var(--primary-color), var(--tertiary-color));
+  height: 100%;
+  width: 80%;
+  border-radius: 20px 0 0 20px;
+  z-index: 1;
+  transform : translateX(30%);
+  opacity: .8;
+}
+
+.add-btn {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  z-index: 10;
+  text-align: center;
+}
+
+.add-btn img{
+  width: 4rem;
+  margin-bottom: .6rem;
+  z-index: 3;
+  cursor: pointer;
+}
+
+.add-btn p {
+  font-size: 1.5rem;
+  color: white;
+}
+.social {
+  margin-top: 4rem;
+  text-align: center;
+}
+
+.social img {
+  width: 1.5rem;
+  height: 2rem;
+  margin:1rem;
+  cursor: pointer;
+}
+
+.social img:first-child {
+  width: 1rem;
+}
+
+
+
+@media only screen and (max-width : 700px ) {
+  html {
+    font-size: 9px;
+  }
+
+  section {
+    margin: 6rem 0;
+  }
+  header {
+    margin-bottom: 5rem;
+  }
+ 
+  
+  nav ul {
+      width : 88%;
+      margin: auto;
+      background-image: linear-gradient(var(--tertiary-color) 20%, var(--secondary-color) 80%);
+      position : absolute;
+      top: 7.4rem;
+      right: 6%;
+      z-index: 20;
+      max-height: 0;
+      overflow: hidden;
+  }
+
+  nav.show ul {
+    padding: 1rem ; 
+    max-height: max-content;
+  }
+
+  nav ul li {
+    display: block;
+    padding: 2rem 1rem ;
+    text-align: center;
+    margin: .6rem auto;
+    border-bottom: 1px solid #dedede;
+  }
+
+  nav a {
+      color: white;
+
+  }
+
+  .section.row {
+    padding-top: 5rem;
+  }
+
+  .row .container {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .row .col-1 {
+    margin-bottom: 3rem;
+  }
+
+  .row .col-2 {
+    margin-bottom: 7rem;
+  }
+
+}
