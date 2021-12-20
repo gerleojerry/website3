@@ -77,10 +77,9 @@ header ul a{
 header ul a:hover {
   color: var(--grey);
 }
-.header ul a:not(.last) {
-  color: orange;
-  font-weight: bold;
-  font-size: 3rem;
+
+header #hamburger {
+  display: none;
 }
 
 .row {
@@ -220,6 +219,9 @@ header ul a:hover {
     margin-bottom: 5rem;
   }
  
+  header #hamburger {
+    display: block;
+  }
   
   nav ul {
       width : 88%;
